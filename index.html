@@ -32,7 +32,7 @@
             { title: 'Colorgen', url: 'https://koralk.github.io/colorgen/' }
         ];
 
-        const accessKey = 'your_unsplash_access_keyyo09P-a-LGAHE--B6KIAmZeeX3R-ontZN2CYw6ECZeI'; // Replace with your Unsplash access key
+        const accessKey = 'yo09P-a-LGAHE--B6KIAmZeeX3R-ontZN2CYw6ECZeI'; // Replace with your Unsplash access key
 
         projects.forEach((project, index) => {
             fetch(`https://api.unsplash.com/photos/random?query=${project.title}&client_id=${accessKey}`)

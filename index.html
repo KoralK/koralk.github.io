@@ -38,6 +38,7 @@
             fetch(`https://api.unsplash.com/photos/random?query=${project.title}&client_id=${accessKey}`)
                 .then(response => response.json())
                 .then(data => {
+                    console.log(data);  // Log the data to the console
                     const card = document.getElementById(`card${index + 1}`);
                     card.innerHTML = `
                         <div class="card" style="width: 18rem;">
@@ -48,9 +49,10 @@
                             </div>
                         </div>
                     `;
-                })
-                .catch(error => console.error(error));
+            })
+            .catch(error => console.error(error));
         });
+
     </script>
 </body>
 </html>

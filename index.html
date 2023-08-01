@@ -36,10 +36,10 @@
 
         projects.forEach((project, index) => {
             fetch(`https://api.unsplash.com/photos/random?query=${project.title}&client_id=${accessKey}`)
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data);  // Log the data to the console
-                    const card = document.getElementById(`card${index + 1}`);
+            .then(response => response.json())
+            .then(data => {
+                const card = document.getElementById(`card${index + 1}`);
+                if (data.urls) {
                     card.innerHTML = `
                         <div class="card" style="width: 18rem;">
                             <img src="${data.urls.small}" class="card-img-top" alt="${project.title}">
@@ -49,9 +49,21 @@
                             </div>
                         </div>
                     `;
+                } else {
+                    card.innerHTML = `
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">${project.title}</h5>
+                                <p>No image found for this project.</p>
+                                <a href="${project.url}" class="btn btn-primary">Go to Project</a>
+                            </div>
+                        </div>
+                    `;
+                }
             })
             .catch(error => console.error(error));
         });
+
 
     </script>
 </body>

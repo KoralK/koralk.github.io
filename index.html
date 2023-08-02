@@ -25,46 +25,26 @@
     </div>
 
     <script>
+    
         const projects = [
-            { title: 'Mac Apple Interview', url: 'https://koralk.github.io/mac_apple_interview/' },
-            { title: 'Linux Interview Q&A', url: 'https://koralk.github.io/linux_interview_qa/' },
-            { title: 'Canada', url: 'https://koralk.github.io/canada/' },
-            { title: 'Colors', url: 'https://koralk.github.io/colorgen/' }
+            { title: 'Mac Apple Interview', url: 'https://koralk.github.io/mac_apple_interview/', img: 'https://cdn.jsdelivr.net/gh/koralk/koralk.github.io/imgs/apple.jpeg' },
+            { title: 'Linux Interview Q&A', url: 'https://koralk.github.io/linux_interview_qa/', img: 'https://cdn.jsdelivr.net/gh/koralk/koralk.github.io/imgs/linux.jpeg' },
+            { title: 'Canada', url: 'https://koralk.github.io/canada/', img: 'https://cdn.jsdelivr.net/gh/koralk/koralk.github.io/imgs/canada.jpeg' },
+            { title: 'Colors', url: 'https://koralk.github.io/colorgen/', img: 'https://cdn.jsdelivr.net/gh/koralk/koralk.github.io/imgs/colors.jpeg' }
         ];
-
-        const accessKey = 'yo09P-a-LGAHE--B6KIAmZeeX3R-ontZN2CYw6ECZeI'; // Replace with your Unsplash access key
-
+       
         projects.forEach((project, index) => {
-            fetch(`https://api.unsplash.com/photos/random?query=${project.title}&client_id=${accessKey}`)
-            .then(response => response.json())
-            .then(data => {
-                const card = document.getElementById(`card${index + 1}`);
-                if (data.urls) {
-                    card.innerHTML = `
-                        <div class="card" style="width: 18rem;">
-                            <img src="${data.urls.small}" class="card-img-top" alt="${project.title}">
-                            <div class="card-body">
-                                <h5 class="card-title">${project.title}</h5>
-                                <a href="${project.url}" class="btn btn-primary">Go to Project</a>
-                            </div>
-                        </div>
-                    `;
-                } else {
-                    card.innerHTML = `
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">${project.title}</h5>
-                                <p>No image found for this project.</p>
-                                <a href="${project.url}" class="btn btn-primary">Go to Project</a>
-                            </div>
-                        </div>
-                    `;
-                }
-            })
-            .catch(error => console.error(error));
+            const card = document.getElementById(`card${index + 1}`);
+            card.innerHTML = `
+                <div class="card" style="width: 18rem;">
+                    <img src="${project.img}" class="card-img-top" alt="${project.title}">
+                    <div class="card-body">
+                        <h5 class="card-title">${project.title}</h5>
+                        <a href="${project.url}" class="btn btn-primary">Go to Project</a>
+                    </div>
+                </div>
+            `;
         });
-
-
     </script>
 </body>
 </html>

@@ -21,7 +21,9 @@
             <div class="col-md-3" id="card4">
                 <!-- Card content will be added here -->
             </div>
-            <div class="col-md-4" id="card5">
+        </div>
+        <div class="row">
+            <div class="col-md-3" id="card5">
                 <!-- Card content will be added here -->
             </div>
         </div>
@@ -40,7 +42,7 @@
         projects.forEach((project, index) => {
             const card = document.getElementById(`card${index + 1}`);
             card.innerHTML = `
-                <div class="card" style="width: 18rem;">
+                <div class="card h-100" style="width: 100%;">
                     <img src="${project.img}" class="card-img-top" alt="${project.title}">
                     <div class="card-body">
                         <h5 class="card-title">${project.title}</h5>

@@ -2,8 +2,7 @@
 <html lang="en">
 
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6199833461914808"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6199833461914808" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koral's Projects</title>
@@ -13,14 +12,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <style>
         .card-img-top {
-            height: 200px; /* Adjust this value to change the height of the images */
+            height: 200px;
             object-fit: cover;
         }
 
-        /* Responsive YouTube video styling */
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* Aspect ratio for 16:9 */
+            padding-bottom: 56.25%;
             padding-top: 30px;
             height: 0;
             overflow: hidden;
@@ -34,16 +32,38 @@
             height: 100%;
         }
     </style>
-    <!-- Google AdSense -->
-    
 </head>
 
 <body>
+    <!-- Navigation Menu -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Koral's Projects</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#interview-questions">Interview Questions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#videos">Videos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="container mt-5">
         <h1 class="text-center mb-5">Koral's Projects</h1>
 
         <!-- Main Applications -->
-        <div class="row">
+        <div class="row" id="projects">
             <div class="col-md-3" id="card1"></div>
             <div class="col-md-3" id="card2"></div>
             <div class="col-md-3" id="card3"></div>
@@ -60,7 +80,7 @@
         <div class="text-center mt-4">
             <ins class="adsbygoogle"
                 style="display:block"
-                data-ad-client="ca-pub-XXXXXXXXXX"
+                data-ad-client="ca-pub-6199833461914808"
                 data-ad-slot="XXXXXXX"
                 data-ad-format="auto"
                 data-full-width-responsive="true"></ins>
@@ -70,7 +90,7 @@
         </div>
 
         <!-- Interview Questions -->
-        <h2 class="text-center mt-5">Interview Questions Apps</h2>
+        <h2 class="text-center mt-5" id="interview-questions">Interview Questions Apps</h2>
         <div class="row">
             <div class="col-md-3" id="card9"></div>
             <div class="col-md-3" id="card10"></div>
@@ -94,7 +114,7 @@
         <div class="text-center mt-4">
             <ins class="adsbygoogle"
                 style="display:block"
-                data-ad-client="ca-pub-XXXXXXXXXX"
+                data-ad-client="ca-pub-6199833461914808"
                 data-ad-slot="XXXXXXX"
                 data-ad-format="auto"
                 data-full-width-responsive="true"></ins>
@@ -104,7 +124,7 @@
         </div>
 
         <!-- YouTube Videos -->
-        <h2 class="text-center mt-5">Videos</h2>
+        <h2 class="text-center mt-5" id="videos">Videos</h2>
         <div class="row">
             <div class="col-md-6 video-container">
                 <iframe src="https://www.youtube.com/embed/7xfybRALlwE" frameborder="0" allowfullscreen></iframe>
@@ -156,6 +176,9 @@
             `;
         });
     </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>
